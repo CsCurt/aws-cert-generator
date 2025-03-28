@@ -10,28 +10,41 @@ It generates:
 - A CSR for the End Entity
 - Validates the chain with OpenSSL
 
-## 🔧 Use Case
+## Use Case
 
 AWS IAM Roles Anywhere allows you to assume IAM roles using X.509 certificates. This script helps bootstrap your certificate infrastructure without requiring a full CA.
 
-## 🚀 Usage
+## Usage
 
-### Clone and run locally
+### Direct Install (One-Liner)
 
+```bash
+curl -sSL https://raw.githubusercontent.com/CsCurt/aws-cert-generator/main/generate_self_signed_cert.sh | bash
+```
+
+### Or Run Locally
+#### Option 1:
 ```bash
 git clone https://github.com/CsCurt/aws-cert-generator.git
 cd aws-cert-generator
 chmod +x generate_self_signed_cert.sh
 ./generate_self_signed_cert.sh
 ```
-
-### Or run it directly from GitHub
+#### Option 2:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/CsCurt/aws-cert-generator/main/generate_self_signed_cert.sh | bash
+curl -o generate_self_signed_cert.sh https://raw.githubusercontent.com/CsCurt/aws-cert-generator/main/generate_self_signed_cert.sh
+chmod +x generate_self_signed_cert.sh
+./generate_self_signed_cert.sh
 ```
+#### Option 3: Download ZIP
 
-## 🛠️ Output Files
+1. Go to [https://github.com/CsCurt/aws-cert-generator](https://github.com/CsCurt/aws-cert-generator)
+2. Click the green "Code" button, then choose "Download ZIP"
+3. Extract the ZIP, open the folder, and run the script
+
+
+## Output Files
 
 After running, you'll get:
 
@@ -42,11 +55,11 @@ After running, you'll get:
 - `end-entity.csr` — Certificate Signing Request
 - `trust-anchor.cnf` and `end-entity.cnf` — Config files used for OpenSSL
 
-## 📅 Certificate Validity
+## Certificate Validity
 
 Certificates are valid for **365 days** by default. You can update the `VALIDITY_DAYS` variable in the script to adjust.
 
-## 📘 References
+## References
 
 - [AWS IAM Roles Anywhere Trust Model](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/trust-model.html)
 - [OpenSSL Manual](https://www.openssl.org/docs/)
