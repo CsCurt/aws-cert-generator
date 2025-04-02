@@ -4,9 +4,9 @@ set -euo pipefail
 
 # === Configuration ===
 COUNTRY="US"
-STATE="CA"
-CITY="Irvine"
-ORG="CrowdStrike, Inc."
+STATE="IL"
+CITY="Chicago"
+ORG="acme"
 ORG_UNIT="IT"
 EMAIL="it@crowdstrike.com"
 
