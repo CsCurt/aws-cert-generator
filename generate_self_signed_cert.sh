@@ -8,7 +8,7 @@ STATE="IL"
 CITY="Chicago"
 ORG="acme"
 ORG_UNIT="IT"
-EMAIL="it@crowdstrike.com"
+EMAIL="it@acme.com"
 
 # Validity period for the cert (365 days)
 VALIDITY_DAYS=365
